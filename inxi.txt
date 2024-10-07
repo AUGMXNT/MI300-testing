@@ -1,0 +1,95 @@
+System:
+  Host: ENC1-CLS01-SVR09 Kernel: 6.8.0-45-generic x86_64 bits: 64 Console: pty pts/0
+    Distro: Ubuntu 22.04.5 LTS (Jammy Jellyfish)
+Machine:
+  Type: Server System: Dell product: PowerEdge XE9680 v: N/A serial: <superuser required>
+  Mobo: Dell model: 0CNX93 v: A00 serial: <superuser required> UEFI: Dell v: 2.0.4
+    date: 06/24/2024
+CPU:
+  Info: 2x 52-core model: Intel Xeon Platinum 8470 bits: 64 type: MT MCP SMP cache:
+    L2: 2x 104 MiB (208 MiB)
+  Speed (MHz): avg: 968 min/max: 800/3800 cores: 1: 760 2: 800 3: 800 4: 800 5: 800 6: 800
+    7: 800 8: 800 9: 800 10: 800 11: 800 12: 800 13: 797 14: 800 15: 800 16: 800 17: 800 18: 800
+    19: 2400 20: 800 21: 2500 22: 800 23: 800 24: 800 25: 800 26: 800 27: 3800 28: 800 29: 800
+    30: 800 31: 800 32: 800 33: 800 34: 800 35: 1200 36: 800 37: 800 38: 800 39: 800 40: 800
+    41: 800 42: 800 43: 800 44: 800 45: 800 46: 800 47: 800 48: 800 49: 800 50: 800 51: 800
+    52: 800 53: 800 54: 800 55: 800 56: 800 57: 800 58: 800 59: 800 60: 800 61: 800 62: 800
+    63: 800 64: 800 65: 800 66: 800 67: 800 68: 800 69: 800 70: 800 71: 800 72: 800 73: 800
+    74: 800 75: 800 76: 800 77: 800 78: 800 79: 800 80: 800 81: 800 82: 800 83: 800 84: 800
+    85: 800 86: 800 87: 800 88: 800 89: 800 90: 800 91: 800 92: 800 93: 800 94: 800 95: 800
+    96: 800 97: 800 98: 800 99: 800 100: 800 101: 800 102: 800 103: 800 104: 800 105: 800
+    106: 800 107: 800 108: 2400 109: 800 110: 800 111: 800 112: 800 113: 800 114: 800 115: 800
+    116: 800 117: 800 118: 800 119: 2400 120: 800 121: 900 122: 800 123: 1800 124: 800 125: 800
+    126: 800 127: 800 128: 800 129: 2500 130: 800 131: 2800 132: 800 133: 2400 134: 800 135: 800
+    136: 800 137: 800 138: 800 139: 800 140: 800 141: 800 142: 800 143: 2500 144: 800 145: 2400
+    146: 800 147: 800 148: 800 149: 800 150: 800 151: 3300 152: 800 153: 800 154: 800 155: 800
+    156: 800 157: 800 158: 800 159: 800 160: 2400 161: 800 162: 800 163: 800 164: 800 165: 800
+    166: 800 167: 800 168: 800 169: 800 170: 2400 171: 3800 172: 800 173: 2400 174: 2500 175: 800
+    176: 800 177: 2500 178: 800 179: 2500 180: 800 181: 800 182: 800 183: 800 184: 800 185: 800
+    186: 800 187: 800 188: 800 189: 800 190: 800 191: 800 192: 800 193: 800 194: 800 195: 800
+    196: 800 197: 800 198: 800 199: 800 200: 800 201: 800 202: 800 203: 800 204: 800 205: 800
+    206: 800 207: 800 208: 800
+Graphics:
+  Device-1: Matrox Systems Integrated G200eW3 Graphics driver: mgag200 v: kernel
+  Display: server: No display server data found. Headless machine? tty: 157x54
+  Message: GL data unavailable in console. Try -G --display
+Audio:
+  Message: No device data found.
+Network:
+  Device-1: Broadcom NetXtreme BCM5720 Gigabit Ethernet PCIe driver: tg3
+  IF: eno8303 state: down mac: c4:cb:e1:bf:76:e4
+  Device-2: Broadcom NetXtreme BCM5720 Gigabit Ethernet PCIe driver: tg3
+  IF: eno8403 state: down mac: c4:cb:e1:bf:76:e5
+  Device-3: Broadcom BCM57608 10Gb/25Gb/50Gb/100Gb/200Gb/400Gb Ethernet driver: bnxt_en
+  IF: enp28s0np0 state: up speed: 400000 Mbps duplex: full mac: 6c:92:cf:2c:f5:40
+  Device-4: Broadcom BCM57504 NetXtreme-E 10Gb/25Gb/40Gb/50Gb/100Gb Ethernet driver: bnxt_en
+  IF: eno12399np0 state: up speed: 25000 Mbps duplex: full mac: 6e:93:15:a4:67:87
+  Device-5: Broadcom BCM57504 NetXtreme-E 10Gb/25Gb/40Gb/50Gb/100Gb Ethernet driver: bnxt_en
+  IF: eno12409np1 state: up speed: 25000 Mbps duplex: full mac: 6e:93:15:a4:67:87
+  Device-6: Broadcom BCM57504 NetXtreme-E 10Gb/25Gb/40Gb/50Gb/100Gb Ethernet driver: bnxt_en
+  IF: eno12419np2 state: up speed: 25000 Mbps duplex: full mac: 6e:93:15:a4:67:87
+  Device-7: Broadcom BCM57504 NetXtreme-E 10Gb/25Gb/40Gb/50Gb/100Gb Ethernet driver: bnxt_en
+  IF: eno12429np3 state: up speed: 25000 Mbps duplex: full mac: 6e:93:15:a4:67:87
+  Device-8: Broadcom BCM57608 10Gb/25Gb/50Gb/100Gb/200Gb/400Gb Ethernet driver: bnxt_en
+  IF: enp62s0np0 state: up speed: 400000 Mbps duplex: full mac: 6c:92:cf:2d:11:a0
+  Device-9: Broadcom BCM57608 10Gb/25Gb/50Gb/100Gb/200Gb/400Gb Ethernet driver: bnxt_en
+  IF: enp79s0np0 state: up speed: 400000 Mbps duplex: full mac: 6c:92:cf:2d:4a:e0
+  Device-10: Broadcom BCM57608 10Gb/25Gb/50Gb/100Gb/200Gb/400Gb Ethernet driver: bnxt_en
+  IF: enp96s0np0 state: up speed: 400000 Mbps duplex: full mac: 6c:92:cf:2c:cb:60
+  Device-11: Broadcom BCM57608 10Gb/25Gb/50Gb/100Gb/200Gb/400Gb Ethernet driver: bnxt_en
+  IF: enp158s0np0 state: up speed: 400000 Mbps duplex: full mac: 6c:92:cf:2d:3b:f0
+  Device-12: Broadcom BCM57608 10Gb/25Gb/50Gb/100Gb/200Gb/400Gb Ethernet driver: bnxt_en
+  IF: enp190s0np0 state: up speed: 400000 Mbps duplex: full mac: 6c:92:cf:2d:29:60
+  Device-13: Broadcom BCM57608 10Gb/25Gb/50Gb/100Gb/200Gb/400Gb Ethernet driver: bnxt_en
+  IF: enp206s0np0 state: up speed: 400000 Mbps duplex: full mac: 6c:92:cf:2d:06:80
+  Device-14: Broadcom BCM57608 10Gb/25Gb/50Gb/100Gb/200Gb/400Gb Ethernet driver: bnxt_en
+  IF: enp222s0np0 state: up speed: 400000 Mbps duplex: full mac: 6c:92:cf:2d:3c:d0
+  Device-15: Dell iDRAC Virtual NIC type: USB driver: cdc_ether
+  IF: idrac state: unknown speed: 425 Mbps duplex: half mac: c4:cb:e1:c3:91:b1
+  IF-ID-1: bond0 state: up speed: 100000 Mbps duplex: full mac: 6e:93:15:a4:67:87
+  IF-ID-2: bonding_masters state: N/A speed: N/A duplex: N/A mac: N/A
+Drives:
+  Local Storage: total: 111.77 TiB used: 42.14 GiB (0.0%)
+  ID-1: /dev/nvme0n1 vendor: Dell model: Ent NVMe PM1733a RI 15.36TB size: 13.97 TiB
+  ID-2: /dev/nvme1n1 vendor: Dell model: Ent NVMe PM1733a RI 15.36TB size: 13.97 TiB
+  ID-3: /dev/nvme2n1 vendor: Dell model: Ent NVMe PM1733a RI 15.36TB size: 13.97 TiB
+  ID-4: /dev/nvme3n1 vendor: Dell model: Ent NVMe PM1733a RI 15.36TB size: 13.97 TiB
+  ID-5: /dev/nvme5n1 vendor: Dell model: Ent NVMe PM1733a RI 15.36TB size: 13.97 TiB
+  ID-6: /dev/nvme6n1 vendor: Dell model: Ent NVMe PM1733a RI 15.36TB size: 13.97 TiB
+  ID-7: /dev/nvme7n1 vendor: Dell model: Ent NVMe PM1733a RI 15.36TB size: 13.97 TiB
+  ID-8: /dev/nvme8n1 vendor: Dell model: Ent NVMe PM1733a RI 15.36TB size: 13.97 TiB
+Partition:
+  ID-1: / size: 437.94 GiB used: 42.13 GiB (9.6%) fs: ext4 dev: /dev/nvme0n1p2
+  ID-2: /boot/efi size: 1.05 GiB used: 6.1 MiB (0.6%) fs: vfat dev: /dev/nvme0n1p1
+Swap:
+  ID-1: swap-1 type: file size: 8 GiB used: 0 KiB (0.0%) file: /swap.img
+Sensors:
+  Permissions: Unable to run ipmi sensors. Root privileges required.
+  System Temperatures: cpu: 56.0 C mobo: N/A
+  Fan Speeds (RPM): N/A
+  GPU: device: amdgpu temp: 38.0 C device: amdgpu temp: 44.0 C device: amdgpu temp: 44.0 C
+    device: amdgpu temp: 47.0 C device: amdgpu temp: 43.0 C device: amdgpu temp: 42.0 C
+    device: amdgpu temp: 41.0 C device: amdgpu temp: 44.0 C
+Info:
+  Processes: 2001 Uptime: 1d 4h 30m Memory: 1.97 TiB used: 43.42 GiB (2.2%) Init: systemd
+  runlevel: 5 Shell: Bash inxi: 3.3.13

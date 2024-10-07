@@ -1,0 +1,7 @@
+System Output
+---
+fastfetch > fastfetch
+
+sudo apt install inxi
+inxi -F > inxi.txt
+
