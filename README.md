@@ -1,36 +1,37 @@
-## Testing Log
+# 8 x MI300X Testing 
 
-System Info:
-fastfetch > fastfetch
+This repo tracks the testing of an 8 x MI300X node graciously provided by [Hot Aisle](https://hotaisle.xyz/) for [Benchmark & Analysis](https://hotaisle.xyz/benchmarks-and-analysis/) testing. If you like the results, you can of course, [rent the exact same setup](https://hotaisle.xyz/pricing/) from them.
 
-sudo apt install inxi
-inxi -F > inxi.txt
+To better organize the testing and results, I've moved all testing into [Jupyter](https://jupyter.org/) notebooks and published with [Quarto](https://quarto.org/). You can of course load the raw ipynbs, or the published HTML.
 
-df -h > df.txt
+## Install
+If you are looking to run the Jupyter/Quarto notebooks:
+```
+# First install mamba
+# https://github.com/conda-forge/miniforge?tab=readme-ov-file#install
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh -b -p PREFIX /<INSTALL_PATH>/miniforge3
+mamba init
 
-https://panthema.net/2013/pmbw/
-wget https://panthema.net/2013/pmbw/pmbw-0.6.2-linux_x86-64.tar.bz
-sudo apt install gnuplot
-nice -n -2 ./pmbw -S 0
+# In (base) env
+mamba activate base
+pip install jupyter jupyterlab
+mamba install nb_conda_kernels
+
+# make sure you include `ipykernel` in each venv that you want to use with jupyter
+
+# https://quarto.org/docs/get-started/
+# install Quarto for your platform, eg
+wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-amd64.deb
+sudo dpkg -i quarto-1.5.57-linux-amd64.deb
 
 
-https://cdn.geekbench.com/Geekbench-6.3.0-Linux.tar.gz
-https://browser.geekbench.com/v6/cpu/8182056
+# Run Jupyter if you want to run/edit the files
+jupyter lab
+```
 
-https://www.passmark.com/downloads/pt_linux_x64.zip
-sudo apt install libncurses5
+- [00-system-info.ipynb](00-system-info.ipynb) - for info about the node
 
-https://www.passmark.com/baselines/V11/display.php?id=507520112395
-
-mini
-python 3.11
-hf download
-
-Download
-deepseek
-deepseek-ai/DeepSeek-V2.5
-
-llama 3
 
 
 # 
