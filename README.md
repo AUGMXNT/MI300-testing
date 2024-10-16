@@ -25,6 +25,8 @@ mamba install nb_conda_kernels
 wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-amd64.deb
 sudo dpkg -i quarto-1.5.57-linux-amd64.deb
 
+# For Quarto integration
+pip install jupyterlab-quarto
 
 # Run Jupyter if you want to run/edit the files
 jupyter lab
