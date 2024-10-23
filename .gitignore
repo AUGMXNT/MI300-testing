@@ -1,0 +1,22 @@
+.ipynb_checkpoints/
+
+# External Repos
+vllm/
+amd_smi/
+
+torchchat/
+
+torchtune/
+
+axolotl/
+DeepSpeed/
+xformers/
+
+# axolotl
+last_run_prepared/
+outputs
+
+# logs
+wandb/
+tt-llama3_1/wandb/
+*.log
