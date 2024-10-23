@@ -24,7 +24,7 @@
 # Tokenizer
 tokenizer:
   _component_: torchtune.models.llama3.llama3_tokenizer
-  path: /tmp/Meta-Llama-3.1-70B-Instruct/original/tokenizer.model
+  path: /tune/Meta-Llama-3.1-70B-Instruct/original/tokenizer.model
   max_seq_len: null
 
 # Dataset
@@ -39,7 +39,7 @@ model:
 
 checkpointer:
   _component_: torchtune.training.FullModelHFCheckpointer
-  checkpoint_dir: /tmp/Meta-Llama-3.1-70B-Instruct/
+  checkpoint_dir: /tune/Meta-Llama-3.1-70B-Instruct/
   checkpoint_files: [
     model-00001-of-00030.safetensors,
     model-00002-of-00030.safetensors,
@@ -73,7 +73,7 @@ checkpointer:
     model-00030-of-00030.safetensors,
   ]
   recipe_checkpoint: null
-  output_dir: /tmp/Meta-Llama-3.1-70B-Instruct/
+  output_dir: /tune/Meta-Llama-3.1-70B-Instruct/
   model_type: LLAMA3
 resume_from_checkpoint: False
 
@@ -108,8 +108,9 @@ dtype: bf16
 
 # Logging
 metric_logger:
-  _component_: torchtune.training.metric_logging.DiskLogger
-  log_dir: ${output_dir}
-output_dir: /tmp/full-llama3_1-finetune
+  _component_: torchtune.training.metric_logging.WandBLogger
+  entity: augmxnt
+  project: mi300x-torchtune
+output_dir: /tune/full-llama3_1-70b-finetune
 log_every_n_steps: 1
 log_peak_memory_stats: False

@@ -77,8 +77,9 @@ compile: False # set it to True for better memory and performance
 # Logging
 output_dir: /tmp/lora_finetune_output
 metric_logger:
-  _component_: torchtune.training.metric_logging.DiskLogger
-  log_dir: ${output_dir}
+  _component_: torchtune.training.metric_logging.WandBLogger
+  entity: augmxnt
+  project: mi300x-torchtune
 log_every_n_steps: 1
 log_peak_memory_stats: False
 

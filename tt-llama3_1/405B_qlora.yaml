@@ -29,16 +29,16 @@ model:
 
 tokenizer:
   _component_: torchtune.models.llama3.llama3_tokenizer
-  path: /tmp/Meta-Llama-3.1-405B-Instruct/original/mp8/tokenizer.model
+  path: /tune/Meta-Llama-3.1-405B-Instruct/original/mp8/tokenizer.model
 
 checkpointer:
   _component_: torchtune.training.FullModelHFCheckpointer
-  checkpoint_dir: /tmp/Meta-Llama-3.1-405B-Instruct/
+  checkpoint_dir: /tune/Meta-Llama-3.1-405B-Instruct/
   checkpoint_files:
     filename_format: model-{}-of-{}.safetensors
     max_filename: 00191
   recipe_checkpoint: null
-  output_dir: /tmp/Meta-Llama-3.1-405B-Instruct/
+  output_dir: /tune/Meta-Llama-3.1-405B-Instruct/
   model_type: LLAMA3
 resume_from_checkpoint: False
 save_adapter_weights_only: True
@@ -74,10 +74,11 @@ gradient_accumulation_steps: 16
 compile: False # set it to True for better memory and performance
 
 # Logging
-output_dir: /tmp/qlora_finetune_output
+output_dir: /tune/qlora_finetune_output
 metric_logger:
-  _component_: torchtune.training.metric_logging.DiskLogger
-  log_dir: ${output_dir}
+  _component_: torchtune.training.metric_logging.WandBLogger
+  entity: augmxnt
+  project: mi300x-torchtune
 log_every_n_steps: 1
 log_peak_memory_stats: True
 
