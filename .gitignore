@@ -3,6 +3,7 @@
 # External Repos
 vllm/
 amd_smi/
+flash-attention/
 
 torchchat/
 
