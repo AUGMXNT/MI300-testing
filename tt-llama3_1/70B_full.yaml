@@ -24,14 +24,21 @@
 # Tokenizer
 tokenizer:
   _component_: torchtune.models.llama3.llama3_tokenizer
-  path: /tune/Meta-Llama-3.1-70B-Instruct/original/tokenizer.model
+  path: /tune/Llama-3.1-70B/original/tokenizer.model
   max_seq_len: null
 
 # Dataset
+seed: 42
+shuffle: true
 dataset:
-  _component_: torchtune.datasets.alpaca_dataset
-seed: null
-shuffle: True
+  _component_: torchtune.datasets.chat_dataset
+  source: parquet
+  data_files: dataset.parquet
+  split: train
+  conversation_column: conversations
+  conversation_style: sharegpt
+  train_on_input: False
+  new_system_prompt: null
 
 # Model Arguments
 model:
@@ -39,7 +46,7 @@ model:
 
 checkpointer:
   _component_: torchtune.training.FullModelHFCheckpointer
-  checkpoint_dir: /tune/Meta-Llama-3.1-70B-Instruct/
+  checkpoint_dir: /tune/Llama-3.1-70B/
   checkpoint_files: [
     model-00001-of-00030.safetensors,
     model-00002-of-00030.safetensors,
@@ -73,24 +80,24 @@ checkpointer:
     model-00030-of-00030.safetensors,
   ]
   recipe_checkpoint: null
-  output_dir: /tune/Meta-Llama-3.1-70B-Instruct/
+  output_dir: /tune/Llama-3.1-70B/
   model_type: LLAMA3
 resume_from_checkpoint: False
 
 # Fine-tuning arguments
-batch_size: 2
+batch_size: 8
 epochs: 3
 
 optimizer:
   _component_: torch.optim.AdamW
-  lr: 2e-5
-  # Note: highly recommended to use fused=True optimizer flag
-  # with CPU offload for faster optimizer step.
   fused: True
+  # _component_: bitsandbytes.optim.PagedAdamW8bit
+  lr: 8e-6
 
 loss:
   _component_: torchtune.modules.loss.CEWithChunkedOutputLoss
 max_steps_per_epoch: null
+optimizer_in_bwd: True
 gradient_accumulation_steps: 1
 
 
@@ -110,7 +117,7 @@ dtype: bf16
 metric_logger:
   _component_: torchtune.training.metric_logging.WandBLogger
   entity: augmxnt
-  project: mi300x-torchtune
+  project: shisa-v1
 output_dir: /tune/full-llama3_1-70b-finetune
 log_every_n_steps: 1
-log_peak_memory_stats: False
+log_peak_memory_stats: True
